@@ -12,6 +12,7 @@ module LoginHelper
     fill_in("user[nausea]", :with => "2")
     fill_in("user[tickets]", :with => "15")
     fill_in("user[password]", :with => "password")
+    fill_in("user[password_confirmation]", :with => "password")
     click_button('Create User')
   end
 
@@ -29,8 +30,8 @@ module LoginHelper
       tickets: 10,
       height: 50
     )
-    fill_in("user[name]", :with => "Mindy")
-    fill_in("user[password]", :with => "password")
+    fill_in("session[name]", :with => "Mindy")
+    fill_in("session[password]", :with => "password")
     click_button('Sign In')
   end
 
@@ -41,6 +42,7 @@ module LoginHelper
     fill_in("user[nausea]", :with => "2")
     fill_in("user[tickets]", :with => "15")
     fill_in("user[password]", :with => "password")
+    fill_in("user[password_confirmation]", :with => "password")
     find(:css, "#user_admin").set(true)
     click_button('Create User')
   end
@@ -63,8 +65,8 @@ module LoginHelper
         height: 58,
         admin: true
       )
-    fill_in("user[name]", :with => "Walt Disney")
-    fill_in("user[password]", :with => "password")
+    fill_in("session[name]", :with => "Walt Disney")
+    fill_in("session[password]", :with => "password")
     click_button('Sign In')
   end
 
